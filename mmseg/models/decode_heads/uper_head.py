@@ -134,7 +134,13 @@ class UPerHead(BaseDecodeHead):
         return feats
 
     def forward(self, inputs):
+        for each in inputs:
+            print(each.shape)
         """Forward function."""
         output = self._forward_feature(inputs)
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print(output.shape)
         output = self.cls_seg(output)
+        print(output.shape)
+        #exit(1)
         return output

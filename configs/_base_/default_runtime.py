@@ -4,7 +4,6 @@ log_config = dict(
     hooks=[
         dict(type='TextLoggerHook', by_epoch=False),
         # dict(type='TensorboardLoggerHook')
-        # dict(type='PaviLoggerHook') # for internal services
     ])
 # yapf:enable
 dist_params = dict(backend='nccl')
